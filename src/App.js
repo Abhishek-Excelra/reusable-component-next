@@ -1,0 +1,76 @@
+// App.js
+import React from "react";
+import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
+import LoginForm from "./LoginForm";
+import Dashboard from "./Dashboard";
+import About from "./About";
+import Contact from "./Contact";
+import Profile from "./Profile";
+
+const AuthenticatedRoute = ({ component: Component, isAuthenticated, ...rest }) => (
+  <Route
+    {...rest}
+    render={(props) =>
+      isAuthenticated ? <Component {...props} /> : <Redirect to="/login" />
+    }
+  />
+);
+
+const UnauthenticatedRoute = ({ component: Component, isAuthenticated, isRestricted, ...rest }) => (
+  <Route
+    {...rest}
+    render={(props) =>
+      isAuthenticated && isRestricted ? (
+        <Redirect to="/dashboard" />
+      ) : (
+        <Component {...props} />
+      )
+    }
+  />
+);
+
+const App = () => {
+  const isAuthenticated = false; // Replace with actual authentication logic
+
+  return (
+    <Router>
+      <Switch>
+        <UnauthenticatedRoute
+          isRestricted={false}
+          isAuthenticated={isAuthenticated}
+          component={LoginForm}
+          path="/login"
+          exact
+        />
+        <UnauthenticatedRoute
+          isRestricted={false}
+          isAuthenticated={isAuthenticated}
+          component={About}
+          path="/about"
+          exact
+        />
+        <UnauthenticatedRoute
+          isRestricted={false}
+          isAuthenticated={isAuthenticated}
+          component={Contact}
+          path="/contact"
+          exact
+        />
+        <AuthenticatedRoute
+          isAuthenticated={isAuthenticated}
+          component={Dashboard}
+          path="/dashboard"
+          exact
+        />
+        <AuthenticatedRoute
+          isAuthenticated={isAuthenticated}
+          component={Profile}
+          path="/profile"
+          exact
+        />
+      </Switch>
+    </Router>
+  );
+};
+
+export default App;

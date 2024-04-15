@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Quicksand', sans-serif;
+}
+body 
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.inputBox{
+  width: 120px;
+  height: 40px;
+  margin-left: 10px;
+  margin-top: 5px;
+}
+
+.button{
+  width: 120px;
+  height: 40px;
+  background-color: skyblue;
+  margin-left: 10px;
+  margin-top: 5px;
+  font-size: 20px;
+  font-weight: bold;
+  color: azure;
+  border-color: cyan;
+
+}
