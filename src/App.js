@@ -2,7 +2,7 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
 import LoginForm from "./LoginForm";
-import Dashboard from "./Dashboard";
+import DashboardNew from "./DashboardNew";
 import About from "./About";
 import Contact from "./Contact";
 import Profile from "./Profile";
@@ -56,10 +56,16 @@ const App = () => {
           path="/contact"
           exact
         />
-        <AuthenticatedRoute
+        <UnauthenticatedRoute
           isAuthenticated={isAuthenticated}
-          component={Dashboard}
+          component={DashboardNew}
           path="/dashboard"
+          exact
+        />
+          <UnauthenticatedRoute
+          isAuthenticated={isAuthenticated}
+          component={DashboardNew}
+          path="/modal"
           exact
         />
         <AuthenticatedRoute
