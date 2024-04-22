@@ -1,0 +1,189 @@
+{
+  "project": {
+    "project_id": "PRJ-E-GEOD-18122",
+    "project_name": "fairification",
+    "project_description": "data",
+    "start_date": "2024-03-03",
+    "end_date": "2024-03-03",
+    "funding_source": "data",
+    "extended_metadata": {
+      "a": "data"
+    }
+  },
+  "investigation": {
+    "investigation_id": "INV-E-GEOD-18122",
+    "project_id": "PRJ-E-GEOD-18122",
+    "investigation_title": "Functional remodeling of primary and immortalized progenitor and intermediate cells",
+    "investigation_description": "Functional remodeling of primary and immortalized progenitor and intermediate cells",
+    "principal_investigator": "yajun yi",
+    "start_date": "2010-09-15",
+    "end_date": "2010-09-15",
+    "extended_metadata": {
+      "start_date": "",
+      "accession_no": "E-GEOD-18122",
+      "public_release_date": "2010-09-15",
+      "principal_investigator_email": "yajun.yi@vanderbilt.edu"
+    }
+  },
+  "study": {
+    "study_id": "STD-E-GEOD-18122",
+    "investigation_id": "INV-E-GEOD-18122",
+    "study_title": "Functional remodeling of primary and immortalized progenitor and intermediate cells",
+    "study_description": "Tissue remodeling or regeneration is believed to initiate from organ-specific stem and/or progenitor cells. We report here the establishment of two spontaneously immortalized adult human benign prostate epithelial cell lines, NHPrE1 and BHPrE1. NHPrE1CD133(++)/CD44(++)/OCT4(++)/CK14(+++) was characterized as a putative progenitor cell, and BHPrE1CD133(+)/CD44(+)/OCT4(+)/CK14(++) as a putative intermediate cell. aCGH analysis demonstrated a largely intact diploid karyotype with DNA amplification of PTEN in NHPrE1 or Beta-Catenin in BHPrE1 cells, respectively. A tissue recombination-xenografting model was utilized to compare remodeling of human prostatic tissues in vivo by the NHPrE1 and BHPrE1 cell lines and their parental primary cells. A series of tissue recombinants, made by mixing different ratios of human prostatic epithelial cells and inductive rat urogenital sinus mesenchyme (UGM), were grafted to the renal capsule of SCID mice. Both cell lines were able to regenerate ductal/acinar structures in vivo containing basal and luminal epithelial populations confirmed by the expression of appropriate cytokeratin profiles. Androgen receptor (AR), prostate specific antigen (PSA), and 15-lipoxigenase-2 (15-LOX-2) expression were appropriately expressed in the regenerated epithelial structures. Regeneration of benign human prostatic ductal/acinar architecture could be achieved using as few as 10 NHPrE1 cells while 200,000 BHPrE1 cells were required to achieve prostatic structure. This suggests a greater proportion of progenitor cells in NHPrE1 facilitated regeneration of prostatic morphology and function. These cell lines provide important data on progenitor and intermediate cell phenotypes and represent significant new tools for the elucidation of molecular mechanisms of human prostatic regeneration, pathogenesis and carcinogenesis. Two channel CGH from Agilent platform was used to detect DNA amplification or deletion in genomic samples from NHPrE1 and BHPrE1 cell lines. A common pooled normal DNA refernce was used.",
+    "study_design": null,
+    "start_date": null,
+    "end_date": null,
+    "extended_metadata": {
+      "data": {
+        "accession_no": "data-E-GEOD-18122",
+        "mage_tab_files": [
+          {
+            "Path": "/data/E-GEOD-18122.idf.txt",
+            "Type": "IDF File",
+            "Format": "tab-delimited text",
+            "Description": "Investigation Design Format (IDF)"
+          },
+          {
+            "Path": "/data/E-GEOD-18122.sdrf.txt",
+            "Type": "SDRF File",
+            "Format": "tab-delimited text",
+            "Description": "Sample and Data Relationship Format (SDRF)"
+          }
+        ]
+      },
+      "authors": {
+        "authors-0": {
+          "fax": "",
+          "email": "yajun.yi@vanderbilt.edu",
+          "phone": "",
+          "roles": "submitter",
+          "address": "vanderbilt univ, 2215 Garland Ave, Nashville, TN, USA",
+          "last_name": "yi",
+          "first_name": "yajun",
+          "affiliation": "vanderbilt univ",
+          "mid_initials": "",
+          "roles_term_reference": "",
+          "Person Roles Term Accession Number": ""
+        },
+        "authors-1": {
+          "fax": "",
+          "email": "",
+          "phone": "",
+          "roles": "",
+          "address": "",
+          "last_name": "Jiang",
+          "first_name": "Ming",
+          "affiliation": "",
+          "mid_initials": "",
+          "roles_term_reference": "",
+          "Person Roles Term Accession Number": ""
+        },
+        "authors-2": {
+          "fax": "",
+          "email": "",
+          "phone": "",
+          "roles": "",
+          "address": "",
+          "last_name": "Strand",
+          "first_name": "Douglas",
+          "affiliation": "",
+          "mid_initials": "W",
+          "roles_term_reference": "",
+          "Person Roles Term Accession Number": ""
+        },
+        "authors-3": {
+          "fax": "",
+          "email": "",
+          "phone": "",
+          "roles": "",
+          "address": "",
+          "last_name": "Fernandez",
+          "first_name": "Suzanne",
+          "affiliation": "",
+          "mid_initials": "",
+          "roles_term_reference": "",
+          "Person Roles Term Accession Number": ""
+        },
+        "authors-4": {
+          "fax": "",
+          "email": "",
+          "phone": "",
+          "roles": "",
+          "address": "",
+          "last_name": "He",
+          "first_name": "Yue",
+          "affiliation": "",
+          "mid_initials": "",
+          "roles_term_reference": "",
+          "Person Roles Term Accession Number": ""
+        },
+        "authors-5": {
+          "fax": "",
+          "email": "",
+          "phone": "",
+          "roles": "",
+          "address": "",
+          "last_name": "Yi",
+          "first_name": "Yajun",
+          "affiliation": "",
+          "mid_initials": "",
+          "roles_term_reference": "",
+          "Person Roles Term Accession Number": ""
+        },
+        "authors-6": {
+          "fax": "",
+          "email": "",
+          "phone": "",
+          "roles": "",
+          "address": "",
+          "last_name": "Hayward",
+          "first_name": "Simon",
+          "affiliation": "",
+          "mid_initials": "W",
+          "roles_term_reference": "",
+          "Person Roles Term Accession Number": ""
+        }
+      },
+      "Organism": "",
+      "ontology": "",
+      "SDRF File": "E-GEOD-18122.sdrf.txt",
+      "pubmed_id": "",
+      "study_type": "",
+      "accession_no": "study-E-GEOD-18122",
+      "replicate_type": "",
+      "publication_doi": "",
+      "term_source_file": "http://efo.svn.sourceforge.net/viewvc/efo/trunk/src/efoinowl/efo.owl",
+      "term_source_name": "EFO",
+      "publication_title": "",
+      "normalization_type": "",
+      "publication_status": "",
+      "public_release_date": "2010-09-15",
+      "term_source_version": "",
+      "quality_control_type": "",
+      "publication_author_list": "",
+      "replicate_term_source_reference": "",
+      "normalization_term_source_reference": "",
+      "quality_control_term_source_reference": "",
+      "Publication Status Term Accession Number": "",
+      "publication_status_term_source_reference": ""
+    }
+  },
+  "experiment": {
+    "experiment_id": "EXP-E-GEOD-18122",
+    "study_id": "STD-E-GEOD-18122",
+    "experiment_title": "",
+    "experiment_description": null,
+    "start_date": null,
+    "end_date": null,
+    "extended_metadata": {
+      "accession_no": "exp-E-GEOD-18122",
+      "experimental_factor_name": "CELL LINE",
+      "experimental_factor_type": "cell line",
+      "Comment[AEExperimentType]": "comparative genomic hybridization by array",
+      "Experimental Design Term Accession Number": "",
+      "Experimental Factor Term Accession Number": "",
+      "experimental_design_term_source_reference": "",
+      "experimental_factor_term_source_reference": ""
+    }
+  }
+}

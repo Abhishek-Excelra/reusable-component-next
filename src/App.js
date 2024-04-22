@@ -1,13 +1,22 @@
-// App.js
 import React from "react";
-import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+} from "react-router-dom";
 import LoginForm from "./LoginForm";
 import DashboardNew from "./DashboardNew";
 import About from "./About";
 import Contact from "./Contact";
 import Profile from "./Profile";
+import Preview from "./component/Preview";
 
-const AuthenticatedRoute = ({ component: Component, isAuthenticated, ...rest }) => (
+const AuthenticatedRoute = ({
+  component: Component,
+  isAuthenticated,
+  ...rest
+}) => (
   <Route
     {...rest}
     render={(props) =>
@@ -16,7 +25,12 @@ const AuthenticatedRoute = ({ component: Component, isAuthenticated, ...rest }) 
   />
 );
 
-const UnauthenticatedRoute = ({ component: Component, isAuthenticated, isRestricted, ...rest }) => (
+const UnauthenticatedRoute = ({
+  component: Component,
+  isAuthenticated,
+  isRestricted,
+  ...rest
+}) => (
   <Route
     {...rest}
     render={(props) =>
@@ -62,9 +76,9 @@ const App = () => {
           path="/dashboard"
           exact
         />
-          <UnauthenticatedRoute
-          isAuthenticated={isAuthenticated}
-          component={DashboardNew}
+        <UnauthenticatedRoute
+          isAuthenticated={true}
+          component={Preview}
           path="/modal"
           exact
         />
