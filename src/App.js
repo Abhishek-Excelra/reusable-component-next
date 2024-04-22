@@ -79,7 +79,7 @@ const App = () => {
         <UnauthenticatedRoute
           isAuthenticated={true}
           component={Preview}
-          path="/modal"
+          path="/view"
           exact
         />
         <AuthenticatedRoute
