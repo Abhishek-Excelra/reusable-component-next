@@ -12,7 +12,7 @@ const Table = ({ data }) => {
           </tr>
           {Object.entries(value).map(([nestedKey, nestedValue]) => (
             <React.Fragment key={nestedKey}>
-              {renderRow(`${key}.${nestedKey}`, nestedValue)}
+              {renderRow(`${nestedKey}`, nestedValue)}
             </React.Fragment>
           ))}
         </React.Fragment>
@@ -28,10 +28,10 @@ const Table = ({ data }) => {
   };
 
   return (
-    <table className="table-auto w-full">
+    <table className="table-auto w-full" >
       <thead>
-        <tr>
-          <th className="border px-4 py-2">Field</th>
+        <tr className="bg-gray-300 text-blue-600">
+          <th className="border px-4 py-2">Attribute</th>
           <th className="border px-4 py-2">Value</th>
         </tr>
       </thead>

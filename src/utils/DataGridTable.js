@@ -37,7 +37,6 @@ const DataGridTable = ({ rows, columns, dataGridProp, buttons, additionalCompone
             setSelectedRows(selectedRows);
           },
           ...dataGridProp,
-          autoPageSize:true,
         }}
       />
       {additionalComponent}

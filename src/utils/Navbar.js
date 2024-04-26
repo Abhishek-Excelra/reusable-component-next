@@ -1,39 +1,42 @@
 // Navbar.js
-import React, { useState } from 'react';
-
+import React, { useState, useRef, useEffect } from 'react';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 const Navbar = ({userDetails}) => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const menuRef = useRef(null);
 
   const toggleMenu = () => {
-    setIsOpen(!isOpen);
+    setMenuOpen(!menuOpen);
   };
+
+  const handleClickOutside = (event) => {
+    if (menuRef.current && !menuRef.current.contains(event.target)) {
+      setMenuOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
 
   return (
     <nav className="bg-gray-200 p-4">
       <div className="flex justify-between items-center">
-      <img src="https://www.excelra.com/wp-content/uploads/2022/09/Excelra-Logo_1@3x.png" className="h-8" alt="Excelra Logo" />
-        {/* <div className="text-white">Excelra</div> */}
+      <img src="https://www.excelra.com/wp-content/uploads/2022/09/Excelra-Logo_1@3x.png" className="h-8 ml-4" alt="Excelra Logo" />
         <div className="relative flex align-items-center">
-        {userDetails.full_name} 
+          <div className="mr-4">{userDetails.full_name}</div>
           <button
-            className="text-black focus:outline-none"
+            className="text-black focus:outline-none mr-2"
             onClick={toggleMenu}
           >
-            <svg
-              className="h-6 w-6 fill-current"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-            >
-              {/* Add your user icon SVG here */}
-              <path
-                fillRule="evenodd"
-                d="M9.5 2a3.5 3.5 0 100 7 3.5 3.5 0 000-7zM17 16a1 1 0 11-2 0 5 5 0 00-10 0 1 1 0 11-2 0 7 7 0 1114 0z"
-              />
-            </svg>
+           <AccountCircleIcon />
           </button>
           
-          {isOpen && (
-            <div className="absolute right-0 mt-2 w-48 bg-dark border rounded-lg shadow-lg z-10">
+          {menuOpen && (
+            <div className="absolute right-0 mt-2 w-48 bg-dark border rounded-lg shadow-lg z-10" ref={menuRef}>
               {/* User details list */}
               <ul>
                 <li className="px-4 py-2">{userDetails.full_name}</li>

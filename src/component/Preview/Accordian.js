@@ -17,9 +17,9 @@ const AccordionItem = ({ title, content }) => {
           onClick={toggleAccordion}
         >
           <div className="flex justify-between items-center">
-            <p className="text-lg font-medium text-gray-800">{title}</p>
+            <p className="text-lg font-medium text-gray-800 ml-4">{title}</p>
             <svg
-              className={`w-5 h-5 transition-transform ${
+              className={`w-5 h-5 transition-transform mr-4 ${
                 isOpen ? "transform rotate-90" : ""
               }`}
               viewBox="0 0 20 20"

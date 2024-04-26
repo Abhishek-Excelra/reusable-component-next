@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import axios from "axios";
-
+import VisibilityIcon from '@mui/icons-material/Visibility';
+import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 const LoginForm = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -39,7 +40,7 @@ const LoginForm = () => {
     <>
       <div className="mt-20">
         <center>
-          <img src="https://www.excelra.com/wp-content/uploads/2022/09/Excelra-Logo_1@3x.png" height='auto' width='100px' alt='excelra'/>
+          <img src="https://www.excelra.com/wp-content/uploads/2022/09/Excelra-Logo_1@3x.png" height='auto' width='100px' alt='excelra' />
         </center>
       </div>
       <form
@@ -70,43 +71,7 @@ const LoginForm = () => {
             onClick={togglePasswordVisibility}
             className="absolute inset-y-0 right-0 flex items-center px-2 focus:outline-none"
           >
-            {showPassword ? (
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6 text-gray-600"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M9 5l7 7-7 7"
-                />
-              </svg>
-            ) : (
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6 text-gray-600"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
-                />
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M6 9a6 6 0 0112 0v2a6 6 0 01-12 0V9z"
-                />
-              </svg>
-            )}
+            {showPassword ? <VisibilityOffIcon /> : <VisibilityIcon />}
           </button>
         </div>
         {error && <p className="text-red-500 text-sm mb-4">{error}</p>}

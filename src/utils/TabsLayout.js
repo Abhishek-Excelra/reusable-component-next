@@ -40,14 +40,14 @@ const TabsLayout = ({ userDetails }) => {
 
   return (
     <Box
-      sx={{ bgcolor: 'background.paper' }}
+      sx={{ bgcolor: 'background.paper'}}
     >
       <Navbar userDetails={userDetails}/>
       <Tabs
         value={value}
         onChange={handleChange}
         aria-label="Vertical tabs example"
-        sx={{ borderRight: 1, borderColor: 'divider', display: 'flow' }}
+        sx={{ borderRight: 1, borderColor: 'divider', display: 'flow',marginLeft:'26px'  }}
       >
         {tabInfo.map(({ label, index }) => <Tab label={label} key={index} />)}
       </Tabs>

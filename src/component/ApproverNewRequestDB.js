@@ -21,8 +21,8 @@ const updateDatasetAccess = async (variable) => {
   try {
     const response = await axios.put("http://13.200.179.225:8002/approver/update-dataset-access", { ...variable });
     console.log('Request Dataset Response', response);
-    window.alert(`Request for new dataset ${variable.status}ed`)
-    window.location.reload()
+    //    window.alert(`Request for new dataset ${variable.status}`)
+    response && window.location.reload()
     // Redirect to dashboard on successful login
   } catch (error) {
     console.log("dataset access", error);
@@ -59,7 +59,7 @@ const ApproverNewRequestDB = (props) => {
         updateDatasetAccess({
           "user_id": user_id,
           "request_ids": selectedRows.map(d => d.request_id),
-          "status": "Accept",
+          "status": "approved",
           "remarks": remarks
         })
       ),
@@ -74,7 +74,7 @@ const ApproverNewRequestDB = (props) => {
       onClick: ((event) => updateDatasetAccess({
         "user_id": user_id,
         "request_ids": event.map(d => d.request_id),
-        "status": "Reject",
+        "status": "rejected",
         "remarks": ""
       })),
       disabled: remarks.length < 1,
